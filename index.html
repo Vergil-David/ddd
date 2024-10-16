@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна 1</title>
+    <style>
+        body {
+            background-color: #C8A2C8;
+            color: #ffee00;
+            font-family: Verdana;
+        }
+        img {
+            border: 0px solid black;
+            width: 400px;
+            height: auto;
+            float: right;
+            margin: 15px;
+        }
+        .content {
+            text-align: left;
+            margin-right: 420px;
+        }
+        ul {
+            list-style-type: disc;
+            color: #ffee00;
+            margin-left: 0;
+        }
+        ol {
+            margin-left: 0;
+        }
+        a {
+            color: #ffee00;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        #extraImages {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-bottom: 20px;
+            z-index: 1000; /* Щоб зображення було зверху всього іншого контенту */
+        }
+        #extraImages img {
+            width: 200px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Тут подано опис комп'ютера, ось як він виглядав:</h1>
+
+    <img src="main.png" alt="ORDINATEUR ATARI 520 ST" id="mainImage" onclick="showImages()">
+
+    <div class="content">
+        <h2>Маркований список найкращих пісень:</h2>
+        <ul>
+            <li><a href="https://www.youtube.com/watch?v=xm3YgoEiEDc&t=27s" target="_blank">Rick Astley - Never Gonna Give You Up</a></li>
+            <li>Arctic Monkeys - 505</li>
+            <li>Radiohead - Jigsaw Falling Into Place</li>
+            <li>Palaye Royale - No Love In LA</li>
+        </ul>
+
+        <h2>Нумерований список найкращих ігор:</h2>
+        <ol>
+            <li>Dota 2</li>
+            <li>Cult of the Lamb</li>
+            <li>Batla</li>  
+        </ol>
+    </div>
+
+    <div id="extraImages">
+        <img src="qrcode.png" alt="QR Code">
+    </div>
+
+    <script>
+        function showImages() {
+            var extraImages = document.getElementById("extraImages");
+            if (extraImages.style.display === "none" || extraImages.style.display === "") {
+                extraImages.style.display = "block";
+            } else {
+                extraImages.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
